@@ -1,33 +1,26 @@
-"use client"
-import { PokemonGrid } from "@/app/pokemons";
-import { selectFavoritePokemons } from "@/app/selectors/selectors";
-import { useAppSelector } from "@/store";
-import { useState } from "react";
+import { FavoritePokemons, PokemonGrid, PokemonsReponse, SimplePokemon } from "@/pokemons";
+import { IoHeartOutline } from "react-icons/io5";
+
+
+export const metadata = {
+ title: 'Favoritos',
+ description: 'Ad minim sit cupidatat culpa consectetur.',
+};
 
 
 
 
-export default function PokemonsPage() {
-  const favoritePokemons = useAppSelector(selectFavoritePokemons);
-  const [pokemons, setPokemons] = useState (favoritePokemons);
+export default async function PokemonsPage() {
 
+  
   return (
     <div className="flex flex-col">
-      <span className="text-5xl my-2">
-        Pokémons favoritos <small className="text-blue-500">Global State</small>
-      </span>
-      {
-        pokemons.length === 0 && <NoFavorites />
-      }
-      <PokemonGrid pokemonList={pokemons} />
-    </div>
-  );
-}
 
-export const NoFavorites = () => {
-  return (
-    <div className="flex flex-col items-center justify-center">
-      <span className="text-5xl my-2">No hay pokémons favoritos</span>
+      <span className="text-5xl my-2">Pokémons Favoritos <small className="text-blue-500">Global State</small></span>
+      
+      {/* <PokemonGrid pokemons={ [] } /> */}
+      <FavoritePokemons />
+
     </div>
   );
 }

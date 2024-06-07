@@ -1,4 +1,4 @@
-import { WidgetsGrid } from "../../components/dashboard/WidgetsGrid";
+import { WidgetsGrid } from "../../../components/dashboard/WidgetsGrid";
 export default function MainPage() {
   return (
     <div className="text-black p-2">

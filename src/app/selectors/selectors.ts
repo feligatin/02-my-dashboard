@@ -1,6 +1,6 @@
 import { RootState } from "@/store";
 import { createSelector } from "@reduxjs/toolkit";
-import { SimplePokemon } from "@/app/pokemons";
+import { SimplePokemon } from "@/pokemons";
 
 // Selector para obtener todos los Pokémon favoritos
 export const selectFavoritePokemons = createSelector(
